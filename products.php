@@ -14,7 +14,6 @@ if (isset($_GET['logout'])) {
     exit();
 }
 
-// Correct PDO Query
 $query = "SELECT id, unique_id, name, description, price, stock FROM products WHERE deleted_at = 0";
 $stmt = $conn->prepare($query);
 $stmt->execute();
