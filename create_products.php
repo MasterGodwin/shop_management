@@ -12,11 +12,11 @@ if (isset($_GET['logout'])) {
     exit();
 }
 
-include 'config2.php'; // Ensure this file contains a PDO connection
+include 'config2.php'; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
-        $unique_id = uniqid(); // Generate a unique ID for the product
+        $unique_id = uniqid(); 
         $name = $_POST['name'];
         $description = $_POST['description'];
         $price = $_POST['price'];
